@@ -1,0 +1,12 @@
+{
+  "name": "civic-chat-widget",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build/build.js",
+    "sri": "node scripts/generate-sri.js dist/widget.1.0.0.min.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.0"
+  }
+}

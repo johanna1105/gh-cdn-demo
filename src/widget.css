@@ -1,0 +1,9 @@
+/* src/widget.css */
+.civic-chat{ font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; max-width:380px; }
+.civic-chat *{ box-sizing: border-box; }
+.civic-chat__header{ font-weight:600; padding:8px 10px; }
+.civic-chat__body{ border:1px solid #e0e0e0; padding:8px; border-radius:8px; background:#fff; }
+.civic-chat__messages{ min-height:60px; margin-bottom:8px; font-size:14px; }
+.civic-chat__form{ display:flex; gap:8px; }
+.civic-chat__input{ flex:1; padding:6px 8px; }
+.civic-chat__send{ padding:6px 10px; }
