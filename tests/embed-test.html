@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicChat Widget Demo</title>
+
+  <!-- Optional: separate CSS für strikte CSP -->
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/gh/johanna1105/gh-cdn-demo@1.0.0/dist/widget.1.0.0.min.css" 
+        crossorigin="anonymous">
+</head>
+<body>
+  <h1>CivicChat Widget Test</h1>
+
+  <!-- Mount-Punkt für das Widget -->
+  <div id="civic-chat" 
+       data-api-url="https://httpbin.org/post" 
+       data-lang="de"
+       data-consent-endpoint="/accept"></div>
+
+  <!-- Widget-Script vom CDN mit SRI -->
+  <script src="https://cdn.jsdelivr.net/gh/johanna1105/gh-cdn-demo@1.0.0/dist/widget.1.0.0.min.js"
+          integrity="sha384-g6lH99Zo06jIhG846kMVw7xWoMQXHrBGW1OpjxeLlsR3aDM+KemouwWGq7ZkN6u+"
+          crossorigin="anonymous"
+          async></script>
+
+  <!-- Init-Skript: wartet bis CivicChat geladen ist -->
+  <script>
+    (function waitForInit() {
+      if (window.CivicChat) {
+        window.CivicChat.init({
+          el: document.getElementById('civic-chat')
+        });
+      } else {
+        setTimeout(waitForInit, 50);
+      }
+    })();
+  </script>
+</body>
+</html>
